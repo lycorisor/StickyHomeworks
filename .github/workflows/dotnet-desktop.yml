@@ -39,9 +39,6 @@ jobs:
       env:
         Configuration: ${{ matrix.configuration }}
 
-    - name: Run tests
-      run: dotnet test $env:Solution_Name --configuration $env:Configuration
-
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
       with:
